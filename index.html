@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      SEO & social previews.
+      These stay in HTML (not content.js) because search engines and link
+      previews (Slack, LinkedIn, X, ...) don't run JavaScript.
+      Replace every "Your Name" / example.com value below.
+    -->
+    <title>Your Name – Designer & Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Your Name: projects, experience, skills and ways to get in touch."
+    />
+    <meta name="author" content="Your Name" />
+    <link rel="canonical" href="https://example.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:title" content="Your Name – Designer & Developer" />
+    <meta
+      property="og:description"
+      content="Projects, experience, skills and ways to get in touch."
+    />
+    <!-- A PNG or JPG (1280x640 works well); most link previews don't support SVG. -->
+    <meta property="og:image" content="https://example.com/assets/images/social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Your Name",
+        "url": "https://example.com/",
+        "jobTitle": "Designer & Developer",
+        "sameAs": [
+          "https://github.com/your-username",
+          "https://www.linkedin.com/in/your-username/"
+        ]
+      }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="content.js" defer></script>
+    <script src="js/tilefolio.js" defer></script>
+  </head>
+  <body>
+    <!-- Everything inside these containers is rendered from content.js -->
+    <main class="home">
+      <!-- One grid: the profile block and the tiles pack into it together. -->
+      <div class="start" id="start">
+        <header class="profile" id="profile">
+          <img class="profile-avatar" id="profile-avatar" alt="" />
+          <div class="profile-text">
+            <h1 class="profile-name" id="profile-name"></h1>
+            <p class="profile-tagline" id="profile-tagline"></p>
+            <nav class="socials" id="socials" aria-label="Social links"></nav>
+            <p class="profile-footer" id="footer-text"></p>
+          </div>
+        </header>
+        <nav class="tiles" id="tiles" aria-label="Sections"></nav>
+      </div>
+      <noscript>
+        <p class="noscript">This site needs JavaScript enabled to show its content.</p>
+      </noscript>
+    </main>
+
+    <!-- Overlays are full-screen pages, like an app opened from a Windows Phone tile. -->
+    <div class="overlay" id="overlay" hidden>
+      <div
+        class="overlay-panel"
+        id="overlay-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="overlay-title"
+        tabindex="-1"
+      >
+        <div class="page-bar">
+          <button class="page-back" type="button" aria-label="Back" data-close>
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <p class="page-app-title" id="overlay-app-title"></p>
+        </div>
+        <div class="overlay-content" id="overlay-content"></div>
+      </div>
+    </div>
+  </body>
+</html>
