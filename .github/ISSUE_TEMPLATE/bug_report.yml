@@ -1,0 +1,44 @@
+name: Bug report
+description: Something looks or behaves wrong
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect to see instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the page on ...
+        2. Click the Projects tile
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: e.g. Safari 18 on iOS
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and screen size
+      placeholder: e.g. iPhone 15, portrait
+  - type: textarea
+    id: content
+    attributes:
+      label: Your content.js changes
+      description: If the bug only happens with your own content, paste the relevant tile or block here (remove anything private).
+      render: js
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or recording
+      description: Drag and drop images or a short video here.

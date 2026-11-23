@@ -182,8 +182,10 @@ upload it to any web server.
 ├── content.js          # All your content (edit this)
 ├── js/tilefolio.js     # Renderer: tiles, live tiles, overlays, routing (no need to edit)
 ├── css/style.css       # Styles and theme variables
-├── assets/             # Favicon, images, resume
-└── docs/               # README screenshots
+├── assets/             # Favicon, images, resume, social preview
+├── docs/               # README screenshots
+├── .github/            # Issue and pull request templates
+└── CONTRIBUTING.md     # How to contribute
 ```
 
 ## Browser support
@@ -192,9 +194,10 @@ Current versions of Chrome, Edge, Firefox and Safari.
 
 ## Contributing
 
-Bug reports and pull requests are welcome. Please open an issue first for larger
-changes, so we can agree on the approach. Tilefolio stays dependency-free and
-build-free: plain HTML, CSS and JavaScript that works when you open `index.html`.
+Bug fixes, browser fixes and small improvements are welcome. Please read
+[CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, and open an issue first
+for larger changes. The short version: no build step, no new dependencies, and keep the
+`Your Name` placeholders.
 
 Built something with Tilefolio? Open an issue with a link; I'd love to see it.
 
